@@ -1,0 +1,41 @@
+---
+interface Props {
+  year: number;
+  job: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  details?: string;
+}
+
+const { year, job, company, startDate, endDate, details } = Astro.props;
+---
+
+<div class="grid gap-2">
+  <h3 class="text-2xl text-white">
+    {year}
+  </h3>
+  <div class="flex items-start gap-4 min-h-32">
+    <div class="relative w-[2px] h-full bg-yellow-100">
+      <div class="absolute w-2 h-2 bg-yellow-100 rounded-full top-3 -left-[0.2rem]"></div>
+    </div>
+    <div class="grid gap-3">
+      <header class="flex flex-col w-full">
+        <h4 class="text-white text-lg">
+          {job}
+        </h4>
+        <div class="flex items-center justify-start gap-3">
+          <span class="text-gray-light-100 text-small uppercase font-bold">
+            {company}
+          </span>
+          <div class="text-green-100 text-small">
+            {startDate} / {endDate}          
+          </div>
+        </div>
+      </header>
+      <footer class="italic text-white font-extralight text-sm w-full max-w-64">
+        {details}
+      </footer>
+    </div>
+  </div>
+</div>
