@@ -1,0 +1,16 @@
+.first-letter\:text-cian-100::first-letter {
+  color: #3db9c9;
+}
+
+.animationDelay {
+  animation-delay: calc((10s) / 13 * (var(--position) - 1));
+}
+
+.mask-image {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10% 90%,
+    transparent
+  );
+}
