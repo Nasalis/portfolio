@@ -22,6 +22,19 @@ export default {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         serif: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        autoRun: {
+          '0%': {
+            left: 0
+          },
+          '100%': {
+            left: 'calc(w-48 * -1)'
+          }
+        }
+      },
+      animation: {
+        autoRun: 'autoRun 10s linear infinite'
+      }
     },
 	},
 	plugins: [],
