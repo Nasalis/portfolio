@@ -9,190 +9,194 @@ import '../styles/home.css'
 ---
 
 <Layout title="Davi | Portfolio">
-  <div
-    class="grid grid-cols-12 grid-rows-1 items-start gap-y-4 mb-4 justify-center"
-  >
-    <aside
-      class="grid col-start-1 col-end-3 place-items-center w-[25rem] gap-6 p-9 bg-black-200"
-    >
-      <Image
-        src="https://github.com/Nasalis.png"
-        alt="Profile image"
-        width={200}
-        height={200}
-        class="rounded-full"
-      />
-      <h1 class="text-white text-2xl">Davi dos Santos Freitas</h1>
-      <div class="grid w-full h-full gap-6">
-        <h3 class="text-turquoise-100 uppercase font-semibold">
-          Social medias
-        </h3>
-        <ul class="grid gap-5">
-          <li class="flex items-end w-full gap-2 text-white text-base">
-            <Icon name={"linkedin"} width={32} height={32} />
-            Davi dos Santos Freitas
-          </li>
-          <li class="flex items-end w-full gap-2 text-white text-base">
-            <Icon name={"github"} width={32} height={32} />
-            Nasalis
-          </li>
-        </ul>
-      </div>
-      <div class="grid w-full h-full gap-6">
-        <h3
-          class="flex items-center gap-2 text-turquoise-100 uppercase font-semibold"
+  <div class="relative flex flex-col items-center justify-center w-full h-full bg-white-100 dark:bg-black-100">
+    <div class="flex flex-col w-full max-w-[1170px] h-full mt-14 gap-y-8">
+      <div class="flex items-center justify-center w-full min-h-screen">
+        <div class="grid grid-cols-12 grid-rows-1 items-start gap-y-4 mb-4 justify-center">
+        <aside
+          class="relative flex flex-col place-items-center p-9 gap-6 sm:flex-row xl:grid col-start-1 col-end-13 xl:col-start-1 xl:col-end-4 row-start-2 row-end-3 xl:row-start-1 xl:row-end-3 bg-white-200 dark:bg-black-300 shadow-xl dark:shadow-md w-full xl:w-[23.125rem] h-[690px] rounded-xl  bg-black-200"
         >
-          <Icon name={"language"} width={22} height={20} />
-          Languages
-        </h3>
-        <ul class="grid gap-3">
-          <li class="flex items-center justify-between text-base text-white">
-            Portuguese
-            <div class="flex items-center gap-2">
-              <div class="w-12 h-1 bg-green-100"></div>
-              <div class="w-12 h-1 bg-green-100"></div>
-              <div class="w-12 h-1 bg-green-100"></div>
-              <div class="w-12 h-1 bg-green-100"></div>
+          <Image
+            src="https://github.com/Nasalis.png"
+            alt="Profile image"
+            width={200}
+            height={200}
+            class="rounded-full"
+          />
+          <h1 class="text-white text-2xl">Davi dos Santos Freitas</h1>
+          <div class="grid w-full h-full gap-6">
+            <h3 class="text-turquoise-100 uppercase font-semibold">
+              Social medias
+            </h3>
+            <ul class="grid gap-5">
+              <li class="flex items-end w-full gap-2 text-white text-base">
+                <Icon name={"linkedin"} width={32} height={32} />
+                Davi dos Santos Freitas
+              </li>
+              <li class="flex items-end w-full gap-2 text-white text-base">
+                <Icon name={"github"} width={32} height={32} />
+                Nasalis
+              </li>
+            </ul>
+          </div>
+          <div class="grid w-full h-full gap-6">
+            <h3
+              class="flex items-center gap-2 text-turquoise-100 uppercase font-semibold"
+            >
+              <Icon name={"language"} width={22} height={20} />
+              Languages
+            </h3>
+            <ul class="grid gap-6">
+              <li class="flex flex-col items-start gap-2 justify-between text-base text-white">
+                Portuguese
+                <div class="flex items-center gap-2">
+                  <div class="w-12 h-1 bg-green-100"></div>
+                  <div class="w-12 h-1 bg-green-100"></div>
+                  <div class="w-12 h-1 bg-green-100"></div>
+                  <div class="w-12 h-1 bg-green-100"></div>
+                </div>
+              </li>
+              <li class="flex flex-col items-start gap-2 justify-between text-base text-white">
+                English
+                <div class="flex items-center gap-2">
+                  <div class="w-12 h-1 bg-green-100"></div>
+                  <div class="w-12 h-1 bg-green-100"></div>
+                  <div class="w-12 h-1 bg-green-100"></div>
+                  <div class="w-12 h-1 bg-red-100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <main
+          class="grid col-start-1 col-end-13 xl:col-start-5 xl:col-end-13 self-stretc gap-y-6 p-9 bg-black-200"
+        >
+          <h1 class="uppercase font-bold text-4xl text-white">
+            <b class="text-green-100">Junior</b> Web Developer
+          </h1>
+          <p class="text-base text-white">
+            I am a brazilian developer, 22. I started my studies in programming in
+            January 2020. Currently, my focus is concentrated to learn web develop.
+          </p>
+          <section class="flex flex-col items-start gap-6">
+            <h2 class="first-letter:text-cian-100 uppercase font-bold text-4xl text-white">
+              Experience
+            </h2>
+            <ul class="flex flex-wrap items-center justify-start gap-20 w-full">
+              <li>
+                <ExperienceCard
+                  year={2024}
+                  job="TRAINEE FROT-END DEVELOPER"
+                  company="Fastef"
+                  startDate="2023-09"
+                  endDate="2024-10"
+                  details="Technologies: React, Javascript, Axios, SASS, Dell Design System"
+                />
+              </li>
+              <li>
+                <ExperienceCard
+                  year={2023}
+                  job="TRAINEE FROT-END DEVELOPER"
+                  company="Dell lead"
+                  startDate="2022-08"
+                  endDate="2023-02"
+                  details="Technologies: React, Typescript, Axios, SASS, Dell Design System, Redux"
+                />
+              </li>
+              <li>
+                <ExperienceCard
+                  year={2022}
+                  job="TRAINEE FROT-END DEVELOPER"
+                  company="Insight Data Sciece Lab"
+                  startDate="2021-08"
+                  endDate="2022-08"
+                  details="Developed a web-based system for process analysis"
+                />
+              </li>
+            </ul>
+          </section>
+          <section class="flex flex-col items-start gap-6">
+            <h2 class="first-letter:text-cian-100 uppercase font-bold text-4xl text-white">
+              Projects
+            </h2>
+            <ul class="flex flex-wrap items-start justify-start gap-9 w-full">
+              <li>
+                <ProjectCard
+                  name="Gitcrow"
+                  description="Website for searching users, via github api, and avaiable information about their work and contributions"
+                  technologies="Vite, TypeScript, Tailwind, AntDesign, Apollo, GraphQl"
+                  link={"Gitcrow"}
+                />
+              </li>
+              <li>
+                <ProjectCard
+                  name="Ramirez"
+                  description="Group project to build a portfolio for photographers and clients looking for a professional in their specific career."
+                  technologies="NextJs, Firebase, Framer-Motion, Styled-Components"
+                  link={"Gitcrow"}
+                />
+              </li>
+              <li>
+                <ProjectCard
+                  name="Movieit"
+                  description="A website of movie and TV shows streaming"
+                  technologies="Node, Vite, Typescript, Tailwind, Axios, Framer Motion, Jest"
+                  link={"Gitcrow"}
+                />
+              </li>
+            </ul>
+          </section>
+          <section class="flex flex-col items-start gap-6">
+            <h2 class="first-letter:text-cian-100 uppercase font-bold text-4xl text-white">
+              Technologies
+            </h2>
+            <div class="w-full h-24 overflow-hidden mask-image">
+              <div class="relative flex items-top w-full min-[calc(w-48 * 13)]">
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 1">
+                  <img class="w-full" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+                </div>
+                <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 1.4">
+                  <img class="w-full" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 1.9">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 2.8">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
+                </div>
+                <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 3.4">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 4.3">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 5.7">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 7">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 9">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+                </div>
+                <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 6">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white"/>
+                </div>
+                <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 5.2">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red"/>
+                </div>
+                <div class="absolute left-full animate-autoRun animationDelay" style="--position: 8.1">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+                </div>
+                <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 7.3">
+                  <img class="w-full animation-delay-300" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
+                </div>
+              <div>
             </div>
-          </li>
-          <li class="flex items-center justify-between text-base text-white">
-            English
-            <div class="flex items-center gap-2">
-              <div class="w-12 h-1 bg-green-100"></div>
-              <div class="w-12 h-1 bg-green-100"></div>
-              <div class="w-12 h-1 bg-green-100"></div>
-              <div class="w-12 h-1 bg-red-100"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </aside>
-    <main
-      class="grid col-start-4 col-end-13 gap-y-6 p-9 bg-black-200 w-full h-full"
-    >
-      <h1 class="uppercase font-bold text-4xl text-white">
-        <b class="text-green-100">Junior</b> Web Developer
-      </h1>
-      <p class="text-base text-white">
-        I am a brazilian developer, 22. I started my studies in programming in
-        January 2020. Currently, my focus is concentrated to learn web develop.
-      </p>
-      <section class="flex flex-col items-start gap-6">
-        <h2 class="first-letter:text-cian-100 uppercase font-bold text-4xl text-white">
-          Experience
-        </h2>
-        <ul class="flex items-center justify-start gap-20 w-full">
-          <li>
-            <ExperienceCard
-              year={2024}
-              job="TRAINEE FROT-END DEVELOPER"
-              company="Fastef"
-              startDate="2023-09"
-              endDate="2024-10"
-              details="Technologies: React, Javascript, Axios, SASS, Dell Design System"
-            />
-          </li>
-          <li>
-            <ExperienceCard
-              year={2023}
-              job="TRAINEE FROT-END DEVELOPER"
-              company="Dell lead"
-              startDate="2022-08"
-              endDate="2023-02"
-              details="Technologies: React, Typescript, Axios, SASS, Dell Design System, Redux"
-            />
-          </li>
-          <li>
-            <ExperienceCard
-              year={2022}
-              job="TRAINEE FROT-END DEVELOPER"
-              company="Insight Data Sciece Lab"
-              startDate="2021-08"
-              endDate="2022-08"
-              details="Developed a web-based system for process analysis"
-            />
-          </li>
-        </ul>
-      </section>
-      <section class="flex flex-col items-start gap-6">
-        <h2 class="first-letter:text-cian-100 uppercase font-bold text-4xl text-white">
-          Projects
-        </h2>
-        <ul class="flex items-start justify-start gap-9 w-full">
-          <li>
-            <ProjectCard
-              name="Gitcrow"
-              description="Website for searching users, via github api, and avaiable information about their work and contributions"
-              technologies="Vite, TypeScript, Tailwind, AntDesign, Apollo, GraphQl"
-              link={"Gitcrow"}
-            />
-          </li>
-          <li>
-            <ProjectCard
-              name="Ramirez"
-              description="Group project to build a portfolio for photographers and clients looking for a professional in their specific career."
-              technologies="NextJs, Firebase, Framer-Motion, Styled-Components"
-              link={"Gitcrow"}
-            />
-          </li>
-          <li>
-            <ProjectCard
-              name="Movieit"
-              description="A website of movie and TV shows streaming"
-              technologies="Node, Vite, Typescript, Tailwind, Axios, Framer Motion, Jest"
-              link={"Gitcrow"}
-            />
-          </li>
-        </ul>
-      </section>
-      <section class="flex flex-col items-start gap-6">
-        <h2 class="first-letter:text-cian-100 uppercase font-bold text-4xl text-white">
-          Technologies
-        </h2>
-        <div class="w-full h-24 overflow-hidden mask-image">
-          <div class="relative flex items-top w-full min-[calc(w-48 * 13)]">
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 1">
-              <img class="w-full" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-            </div>
-            <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 1.4">
-              <img class="w-full" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 1.9">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 2.8">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
-            </div>
-            <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 3.4">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 4.3">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 5.7">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 7">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 9">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-            </div>
-            <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 6">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white"/>
-            </div>
-            <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 5.2">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red"/>
-            </div>
-            <div class="absolute left-full animate-autoRun animationDelay" style="--position: 8.1">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
-            </div>
-            <div class="absolute left-full top-10 animate-autoRun animationDelay" style="--position: 7.3">
-              <img class="w-full animation-delay-300" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
-            </div>
-          <div>
+          </section>
+        </main>
         </div>
-      </section>
-    </main>
+      </div>  
+    </div>
   </div>
 </Layout>
