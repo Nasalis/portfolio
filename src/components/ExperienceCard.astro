@@ -11,7 +11,7 @@ interface Props {
 const { year, job, company, startDate, endDate, details } = Astro.props;
 ---
 
-<div class="grid gap-2">
+<div class="grid gap-2 w-[18.75rem]">
   <h3 class="text-2xl text-white">
     {year}
   </h3>
@@ -25,10 +25,10 @@ const { year, job, company, startDate, endDate, details } = Astro.props;
           {job}
         </h4>
         <div class="flex items-center justify-start gap-3">
-          <span class="text-gray-light-100 text-small uppercase font-bold">
+          <span class="text-gray-light-100 text-xs uppercase font-bold">
             {company}
           </span>
-          <div class="text-green-100 text-small">
+          <div class="text-green-100 text-xs">
             {startDate} / {endDate}          
           </div>
         </div>
